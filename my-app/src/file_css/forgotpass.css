@@ -90,7 +90,7 @@
 }
 
 .forgot-password-page .container input{
-   weight:456px;
+   width:456px;
    height:54px;
 }
 
@@ -108,9 +108,9 @@
     margin-bottom: 5px;
 }
 
-.forgot-password-page input[type="text"], 
-.forgot-password-page input[type="email"], 
-.forgot-password-page input[type="password"], 
+.forgot-password-page input[type="text"],
+.forgot-password-page input[type="email"],
+.forgot-password-page input[type="password"],
 .forgot-password-page input[type="date"] {
     width: 100%;
     padding: 10px;

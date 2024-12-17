@@ -9,7 +9,7 @@
       },
       {
         "src": "my-app/dist/**",
-        "use": "@vercel/static"
+        "use": "@vercel/assets"
       }
     ],
     "routes": [

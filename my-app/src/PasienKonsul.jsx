@@ -5,7 +5,7 @@ import Header from "./components/HeaderDokter";
 import Footer from "./components/FooterDokter";
 import FooterDokter from "./components/FooterDokter";
 
-const socket = io("http://localhost:5000"); // Hubungkan ke backend di port 5000
+const socket = io("https://ayune-hosting1-main-kk4q.vercel.app/"); // Hubungkan ke backend di port 5000
 
 const PasienKonsul = () => {
   const [messages, setMessages] = useState([]);

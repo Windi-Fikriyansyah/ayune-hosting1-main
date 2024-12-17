@@ -5,7 +5,7 @@ import Header from "./components/HeaderAfterLogin";
 import Footer from "./components/Footer";
 import "./file_css/consul.css";
 
-const socket = io("http://localhost:5000"); // Hubungkan ke backend di port 5000
+const socket = io("https://ayune-hosting1-main-kk4q.vercel.app"); // Hubungkan ke backend di port 5000
 
 const Consul = () => {
   const [messages, setMessages] = useState([]);

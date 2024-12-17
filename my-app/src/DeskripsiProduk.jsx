@@ -51,7 +51,7 @@ const DeskripsiProduk = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/produk/${id}`) // Gunakan backticks
+      .get(`https://ayune-hosting1-main-kk4q.vercel.app/api/produk/${id}`) // Gunakan backticks
       .then((response) => {
         setProduk(response.data);
       })

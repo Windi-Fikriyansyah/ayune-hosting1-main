@@ -62,13 +62,13 @@ const ConsulDokter = () => {
   useEffect(() => {
     // Buat koneksi socket hanya sekali saat komponen dipasang
     if (!socket.current) {
-      socket.current = io('http://localhost:5000');
+      socket.current = io('https://ayune-hosting1-main-kk4q.vercel.app');
     }
 
     // Ambil chat sebelumnya dari backend
     const fetchChats = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/chat', { 
+        const response = await axios.get('https://ayune-hosting1-main-kk4q.vercel.app/chat', {
           params: { senderId, receiverId }
         });
         setMessages(response.data.chats);
@@ -102,7 +102,7 @@ const ConsulDokter = () => {
       const messageData = { senderId, receiverId, message, type: 'text' };
 
       // Kirim pesan ke backend
-      await axios.post('http://localhost:5000/chat', messageData);
+      await axios.post('https://ayune-hosting1-main-kk4q.vercel.app/chat', messageData);
 
 
       setMessage('');

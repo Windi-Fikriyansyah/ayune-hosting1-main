@@ -13,7 +13,7 @@ const Ahli = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/dokters"); // Endpoint backend
+        const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/dokters"); // Endpoint backend
         const data = await response.json();
         setDoctors(data); // Simpan data dokter dalam state
       } catch (error) {

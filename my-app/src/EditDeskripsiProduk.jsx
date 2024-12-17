@@ -19,7 +19,7 @@ const EditDeskripsiProduk = () => {
   useEffect(() => {
     const fetchProduk = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/produk/${id}`);
+        const response = await fetch(`https://ayune-hosting1-main-kk4q.vercel.app/api/produk/${id}`);
         if (response.ok) {
           const data = await response.json();
           setProduk(data);
@@ -41,30 +41,30 @@ const EditDeskripsiProduk = () => {
 
   const handleUpdate = async () => {
     const { deskripsi, komposisi, caraPemakaian, harga, linkShopee, linkTokped } = produk;
-    const cleanedData = { 
-      deskripsi, 
-      komposisi, 
-      cara_pemakaian: caraPemakaian, 
-      kisaran_harga: harga, 
-      link_shopee: linkShopee, 
-      link_tokopedia: linkTokped 
+    const cleanedData = {
+      deskripsi,
+      komposisi,
+      cara_pemakaian: caraPemakaian,
+      kisaran_harga: harga,
+      link_shopee: linkShopee,
+      link_tokopedia: linkTokped
     };
-  
+
     console.log("Data produk yang akan diupdate:", cleanedData); // Logging data sebelum mengupdate produk
-  
+
     // Validasi data sebelum mengirim permintaan PUT
     if (!deskripsi || !komposisi || !cleanedData.cara_pemakaian || !cleanedData.kisaran_harga || !cleanedData.link_shopee || !cleanedData.link_tokopedia) {
       console.error("Error: Data produk tidak lengkap", cleanedData);
       return;
     }
-  
+
     try {
-      const response = await fetch(`http://localhost:5000/api/produk/${id}`, {
+      const response = await fetch(`https://ayune-hosting1-main-kk4q.vercel.app/api/produk/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(cleanedData),
       });
-  
+
       if (response.ok) {
         console.log('Data produk setelah update:', cleanedData);
         navigate("/DataProduk");
@@ -75,8 +75,8 @@ const EditDeskripsiProduk = () => {
       console.error('Error updating produk:', error);
     }
   };
-  
-  
+
+
 
   return (
     <AdminGuard>

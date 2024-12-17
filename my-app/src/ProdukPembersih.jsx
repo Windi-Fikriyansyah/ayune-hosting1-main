@@ -11,7 +11,7 @@ const ProdukPembersih = () => {
   useEffect(() => {
     // Fetch data dari API
     axios
-      .get("http://localhost:5000/api/produk")
+      .get("https://ayune-hosting1-main-kk4q.vercel.app/api/produk")
       .then((response) => {
         // Filter hanya produk dengan id_jenis = 1
         const filteredProduk = response.data.filter(

@@ -31,7 +31,7 @@ const ProfilePage = ({ user }) => {
       const fetchProfileData = async () => {
         try {
           const response = await fetch(
-            `http://localhost:5000/api/user/profile/${user.id}`
+            `https://ayune-hosting1-main-kk4q.vercel.app/api/user/profile/${user.id}`
           );
           if (!response.ok) {
             throw new Error("Failed to fetch profile data");
@@ -74,7 +74,7 @@ const ProfilePage = ({ user }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/user/profile", {
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/user/profile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

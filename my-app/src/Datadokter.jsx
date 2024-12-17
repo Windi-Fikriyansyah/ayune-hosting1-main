@@ -32,7 +32,7 @@ const Datadokter = () => {
 
   const fetchDataDokter = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/dokters");
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/dokters");
       if (response.ok) {
         const dokters = await response.json();
         setDataDokter(dokters);
@@ -75,7 +75,7 @@ const Datadokter = () => {
 
   const handleAdd = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/dokters", {
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/dokters", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -111,7 +111,7 @@ const Datadokter = () => {
   const handleUpdate = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/dokters/${editId}`,
+        `https://ayune-hosting1-main-kk4q.vercel.app/api/dokters/${editId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -143,7 +143,7 @@ const Datadokter = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/dokters/${id}`, {
+      const response = await fetch(`https://ayune-hosting1-main-kk4q.vercel.app/api/dokters/${id}`, {
         method: "DELETE",
       });
 

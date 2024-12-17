@@ -11,7 +11,7 @@ const ProdukList = () => {
   useEffect(() => {
     // Fetch data produk dari API
     axios
-      .get("http://localhost:5000/api/produk")
+      .get("https://ayune-hosting1-main-kk4q.vercel.app/api/produk")
       .then((response) => {
         setProduk(response.data);
         setLoading(false);

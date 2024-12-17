@@ -32,7 +32,7 @@ const DataUser = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/users");
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/users");
       const users = await response.json();
       console.log("Data pengguna yang diambil:", users);
       setDataUser(users);
@@ -65,7 +65,7 @@ const DataUser = () => {
   const handleAdd = async () => {
     try {
       console.log("Data yang akan ditambahkan:", formData); // Logging data yang akan ditambahkan
-      const response = await fetch("http://localhost:5000/api/users", {
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -110,7 +110,7 @@ const DataUser = () => {
   const handleUpdate = async () => {
     try {
       console.log("Data yang akan diupdate:", formData);
-      await fetch(`http://localhost:5000/api/users/${editId}`, {
+      await fetch(`https://ayune-hosting1-main-kk4q.vercel.app/api/users/${editId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -136,7 +136,7 @@ const DataUser = () => {
   const handleDelete = async (id) => {
     try {
       console.log("ID yang akan dihapus:", id); // Logging ID yang akan dihapus
-      const response = await fetch(`http://localhost:5000/api/users/${id}`, {
+      const response = await fetch(`https://ayune-hosting1-main-kk4q.vercel.app/api/users/${id}`, {
         method: "DELETE",
       });
 

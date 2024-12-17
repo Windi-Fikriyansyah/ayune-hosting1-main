@@ -36,7 +36,7 @@ const Datadeskripsiproduk = () => {
 
   const fetchDataProduk = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/produk");
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/produk");
       if (response.ok) {
         const produk = await response.json();
         console.log("Fetched produk data:", produk); // Logging data yang diterima
@@ -51,7 +51,7 @@ const Datadeskripsiproduk = () => {
 
   const fetchTipeKulit = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/tipe-kulit");
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/tipe-kulit");
       if (response.ok) {
         const tipeKulitData = await response.json();
         setTipeKulit(tipeKulitData);
@@ -65,7 +65,7 @@ const Datadeskripsiproduk = () => {
 
   const fetchMasalahKulit = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/masalah-kulit");
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/masalah-kulit");
       if (response.ok) {
         const masalahKulitData = await response.json();
         setMasalahKulit(masalahKulitData);
@@ -111,7 +111,7 @@ const Datadeskripsiproduk = () => {
 
     console.log("Adding produk with data:", sanitizedFormData); // Logging data sebelum menambah produk
     try {
-      const response = await fetch("http://localhost:5000/api/produk", {
+      const response = await fetch("https://ayune-hosting1-main-kk4q.vercel.app/api/produk", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(sanitizedFormData),
@@ -157,7 +157,7 @@ const Datadeskripsiproduk = () => {
     console.log("Updating produk with data:", formData); // Logging data sebelum permintaan
     try {
       const response = await fetch(
-        `http://localhost:5000/api/produk/${editId}`,
+        `https://ayune-hosting1-main-kk4q.vercel.app/api/produk/${editId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -189,7 +189,7 @@ const Datadeskripsiproduk = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/produk/${id}`, {
+      const response = await fetch(`https://ayune-hosting1-main-kk4q.vercel.app/api/produk/${id}`, {
         method: "DELETE",
       });
 

@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://ayune-hosting1-main-kk4q.vercel.app/",
     methods: ["GET", "PUT", "DELETE", "POST"],
   })
 );
@@ -135,7 +135,7 @@ app.post("/api/login", (req, res) => {
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Ganti dengan asal klien Anda
+    origin: "https://ayune-hosting1-main-kk4q.vercel.app/", // Ganti dengan asal klien Anda
     methods: ["GET", "POST"],
   },
 });
